@@ -14,6 +14,9 @@
 		0AB6DD6D278054FE008A1561 /* Do_2022_RightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD6C278054FE008A1561 /* Do_2022_RightTests.swift */; };
 		0AB6DD77278054FE008A1561 /* Do_2022_RightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD76278054FE008A1561 /* Do_2022_RightUITests.swift */; };
 		0AB6DD79278054FE008A1561 /* Do_2022_RightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD78278054FE008A1561 /* Do_2022_RightUITestsLaunchTests.swift */; };
+		0AB6DD8627805526008A1561 /* PersistanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD8527805526008A1561 /* PersistanceData.swift */; };
+		0AB6DD882780CA91008A1561 /* StartupSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD872780CA91008A1561 /* StartupSheet.swift */; };
+		0AB6DD8A2780DBDE008A1561 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD892780DBDE008A1561 /* MainPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		0AB6DD72278054FE008A1561 /* Do 2022 RightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Do 2022 RightUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6DD76278054FE008A1561 /* Do_2022_RightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do_2022_RightUITests.swift; sourceTree = "<group>"; };
 		0AB6DD78278054FE008A1561 /* Do_2022_RightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do_2022_RightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AB6DD8527805526008A1561 /* PersistanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceData.swift; sourceTree = "<group>"; };
+		0AB6DD872780CA91008A1561 /* StartupSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupSheet.swift; sourceTree = "<group>"; };
+		0AB6DD892780DBDE008A1561 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				0AB6DD5B278054FD008A1561 /* Do_2022_RightApp.swift */,
 				0AB6DD5D278054FD008A1561 /* ContentView.swift */,
+				0AB6DD892780DBDE008A1561 /* MainPage.swift */,
+				0AB6DD872780CA91008A1561 /* StartupSheet.swift */,
+				0AB6DD8527805526008A1561 /* PersistanceData.swift */,
 				0AB6DD5F278054FE008A1561 /* Assets.xcassets */,
 				0AB6DD61278054FE008A1561 /* Preview Content */,
 			);
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB6DD8A2780DBDE008A1561 /* MainPage.swift in Sources */,
 				0AB6DD5E278054FD008A1561 /* ContentView.swift in Sources */,
+				0AB6DD882780CA91008A1561 /* StartupSheet.swift in Sources */,
 				0AB6DD5C278054FD008A1561 /* Do_2022_RightApp.swift in Sources */,
+				0AB6DD8627805526008A1561 /* PersistanceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 200;
 				DEVELOPMENT_ASSET_PATHS = "\"Do 2022 Right/Preview Content\"";
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
@@ -425,6 +437,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,7 +449,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -446,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 200;
 				DEVELOPMENT_ASSET_PATHS = "\"Do 2022 Right/Preview Content\"";
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
@@ -454,6 +467,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,7 +479,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
