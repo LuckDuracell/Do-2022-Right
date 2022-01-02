@@ -50,10 +50,10 @@ struct MainPage: View {
                         Divider()
                     })
                     Button {
+                        user[0].goalsTrue.append(false)
                         withAnimation {
                             user[0].goals.append("")
                         }
-                        user[0].goalsTrue.append(false)
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -73,7 +73,9 @@ struct MainPage: View {
             }
         } .onAppear(perform: {
             if user.isEmpty == false {
-                user[0].goals = cleanGoals(goals: user[0].goals)
+                let unChangedGoals = user[0].goals
+                user[0].goals = cleanGoals(goals: user[0].goals, completed: user.first!.goalsTrue).0
+                user[0].goalsTrue = cleanGoals(goals: unChangedGoals, completed: user.first!.goalsTrue).1
             }
         })
     }

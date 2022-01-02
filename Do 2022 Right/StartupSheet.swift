@@ -64,14 +64,13 @@ struct StartupSheet: View {
                             .frame(width: UIScreen.main.bounds.width, height: 150, alignment: .center)
                         Button {
                             if goals.isEmpty == false {
-                                let newGoals = cleanGoals(goals: goals)
-                                var goalsTrue: [Bool] = []
-                                for _ in newGoals.indices {
-                                    goalsTrue.append(false)
+                                var completions: [Bool] = []
+                                for _ in goals.indices {
+                                    completions.append(false)
                                 }
-                                
+                                let newGoals = cleanGoals(goals: goals, completed: completions)
                                 user.removeAll()
-                                user.append(User(name: name, goals: newGoals, goalsTrue: goalsTrue))
+                                user.append(User(name: name, goals: newGoals.0, goalsTrue: newGoals.1))
                                 User.saveToFile(user)
                                 showSheet.toggle()
                             }
@@ -94,10 +93,14 @@ struct StartupSheet: View {
     }
 }
 
-func cleanGoals(goals: [String]) -> [String] {
+func cleanGoals(goals: [String], completed: [Bool]) -> ([String], [Bool]) {
     var verifiedGoals: [String] = []
+    var verifiedToggles: [Bool] = []
     for i in goals.indices {
-        if goals[i] != "" { verifiedGoals.append(goals[i]) }
+        if goals[i] != "" {
+            verifiedGoals.append(goals[i])
+            verifiedToggles.append(completed[i])
+        }
     }
-    return verifiedGoals
+    return (verifiedGoals, verifiedToggles)
 }
